@@ -28,10 +28,16 @@ def ticket.available?
   false
 end
 
+def ticket.print_default(*x)
+  x.each {|detail| puts "Este ticket es #{detail}" }
+end
+
 puts "Este Ticket es para: #{ticket.event}, at #{ticket.venue}.\n" +
 "The performer is #{ticket.performer}.\n" +
 "The seat is #{ticket.seat}, " +
-"and it costs $#{"%.2f." % ticket.price}"
+"and it costs $#{"%.2f." % ticket.price}" +
+"Este ticket es #{ticket.print_default("prueba", "otra prubea")} "
+
 
 print "Que necesitas saber: "
 request = gets.chomp
