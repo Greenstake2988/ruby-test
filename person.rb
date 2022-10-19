@@ -11,7 +11,7 @@ class Person
     @hobbies << hobby
   end
   def has_friend(friend)
-    @friend << friend
+    @friends << friend
   end
   def Person.method_missing(m, *args)
     method = m.to_s
