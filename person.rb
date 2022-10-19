@@ -10,7 +10,7 @@ class Person
   def has_hobby(hobby)
     @hobbies << hobby
   end
-  def hasfirend(friend)
+  def has_friend(friend)
     @friend << friend
   end
   def Person.method_missing(m, *args)
